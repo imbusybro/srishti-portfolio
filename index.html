@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Srishti — Portfolio</title>
+  <title>Srishti | Data Analyst & Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -34,9 +34,11 @@
     .hero-content { position: relative; z-index: 2; max-width: 900px; }
     .hero-tag { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
     .hero-tag::before { content: ''; width: 30px; height: 1px; background: var(--accent); }
-    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 1.05; margin-bottom: 1rem; color: var(--text); }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 1.05; margin-bottom: 0.6rem; color: var(--text); }
     .hero h1 em { font-style: italic; color: var(--accent); }
-    .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 540px; line-height: 1.8; margin-bottom: 2.5rem; }
+    .hero-role { font-family: 'DM Mono', monospace; font-size: 1rem; color: var(--accent2); letter-spacing: 0.08em; margin-bottom: 1.4rem; }
+    .hero-role span { opacity: 0.5; margin: 0 0.6rem; }
+    .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 520px; line-height: 1.85; margin-bottom: 2.5rem; }
     .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.8rem; border-radius: 2px; font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: all 0.25s; cursor: pointer; border: none; }
     .btn-primary { background: var(--accent); color: #0a0a0f; }
@@ -64,7 +66,7 @@
     .info-card { background: var(--card); border: 1px solid var(--border); border-radius: 2px; padding: 1.2rem 1.5rem; }
     .info-card-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
     .info-card-value { font-size: 0.95rem; color: var(--text); }
-    .info-card-value a { color: var(--accent); text-decoration: none; cursor: pointer; }
+    .info-card-value a { color: var(--accent); text-decoration: none; }
     .info-card-value a:hover { text-decoration: underline; }
 
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
@@ -76,7 +78,7 @@
     .skill-group:hover .skill-tag { border-color: rgba(200,180,255,0.2); color: var(--text); }
 
     .projects-list { display: flex; flex-direction: column; gap: 2rem; }
-    .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 2px; padding: 2rem 2.5rem; display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 2rem; transition: border-color 0.25s, transform 0.25s; position: relative; overflow: hidden; }
+    .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 2px; padding: 2rem 2.5rem; transition: border-color 0.25s, transform 0.25s; position: relative; overflow: hidden; }
     .project-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); transform: scaleY(0); transform-origin: bottom; transition: transform 0.3s; }
     .project-card:hover { border-color: rgba(200,180,255,0.3); transform: translateX(4px); }
     .project-card:hover::before { transform: scaleY(1); }
@@ -106,12 +108,12 @@
     .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
     .contact-intro { font-size: 1.05rem; color: var(--muted); line-height: 1.9; margin-bottom: 2rem; }
     .contact-links { display: flex; flex-direction: column; gap: 1rem; }
-    .contact-link { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; background: var(--card); border: 1px solid var(--border); border-radius: 2px; text-decoration: none; transition: all 0.25s; cursor: pointer; }
+    .contact-link { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; background: var(--card); border: 1px solid var(--border); border-radius: 2px; text-decoration: none; transition: all 0.25s; }
     .contact-link:hover { border-color: var(--accent); transform: translateX(6px); }
     .contact-link-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: rgba(200,180,255,0.08); border-radius: 2px; font-size: 1rem; flex-shrink: 0; }
     .contact-link-info { flex: 1; }
     .contact-link-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
-    .contact-link-val { font-size: 0.9rem; color: var(--text); margin-top: 0.1rem; transition: color 0.3s; }
+    .contact-link-val { font-size: 0.9rem; color: var(--text); margin-top: 0.1rem; }
 
     .contact-form { display: flex; flex-direction: column; gap: 1rem; }
     .form-field { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -157,9 +159,10 @@
     <div class="hero-grid"></div>
     <div class="hero-content">
       <div class="hero-tag">CS & Data Science · NMIMS Mumbai</div>
-      <h1>Hi, I'm <em>Srishti</em>.<br/>I build things &amp; tell stories with data.</h1>
+      <h1>Hi, I'm <em>Srishti</em>.</h1>
+      <div class="hero-role">Aspiring Data Analyst <span>·</span> Tableau <span>·</span> Excel <span>·</span> Python</div>
       <p class="hero-sub">
-        Hi, I'm Srishti — a CS &amp; Data Science undergrad who builds data analytics dashboards and visualizations using Tableau, Excel, and Python, and turns ideas into interactive software. Currently seeking internships in software dev &amp; data analytics.
+        I build interactive dashboards and data-driven solutions to uncover insights and support decision-making — and occasionally gamify the way people learn to code.
       </p>
       <div class="hero-btns">
         <a href="#projects" class="btn btn-primary">View Projects ↓</a>
@@ -188,7 +191,7 @@
     <h2 class="section-title">The person <em>behind the code</em></h2>
     <div class="about-grid fade-in">
       <div class="about-text">
-        <p>I'm a second-year <strong>B.Tech student</strong> in Computer Science Engineering &amp; Data Science at MPSTME, NMIMS University, Mumbai — maintaining a CGPA of 9.23. Originally from Delhi, with a chapter in Dubai — I've grown up across cities and cultures, and that curiosity shows up in everything I build.</p>
+        <p>I'm a second-year <strong>B.Tech student</strong> in Computer Science Engineering &amp; Data Science at MPSTME, NMIMS University, Mumbai — maintaining a CGPA of 9.23. I have a strong interest in analytics, business insights, and visualization.</p>
         <p>My work sits at the intersection of <strong>software development</strong> and <strong>data analytics</strong>. Whether it's gamifying OOP concepts for students or visualizing IMDb trends in Tableau, I love making complex ideas accessible and engaging.</p>
         <p>When I'm not coding, I'm probably rabbit-holing into some new concept, organizing tech events, or figuring out how to make learning less boring for everyone around me.</p>
       </div>
@@ -198,8 +201,8 @@
           <div class="info-card-value">Mumbai, India</div>
         </div>
         <div class="info-card">
-          <div class="info-card-label">Email</div>
-          <div class="info-card-value"><a href="#" id="about-email-link">click to email</a></div>
+          <div class="info-card-label">Currently</div>
+          <div class="info-card-value">Open to internships</div>
         </div>
         <div class="info-card">
           <div class="info-card-label">GitHub</div>
@@ -228,8 +231,9 @@
       <div class="skill-group">
         <div class="skill-group-title">Data & Analytics</div>
         <div class="skill-tags">
-          <span class="skill-tag">Microsoft Excel</span>
           <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">Microsoft Excel</span>
+          <span class="skill-tag">Data Visualization</span>
           <span class="skill-tag">SAS</span>
           <span class="skill-tag">SQL (learning)</span>
         </div>
@@ -260,57 +264,45 @@
     <div class="projects-list fade-in">
       <div class="project-card">
         <div class="project-num">01</div>
-        <div>
-          <div class="project-tech">C++</div>
-          <div class="project-title">Alice in C++ Land</div>
-          <div class="project-desc">A gamified storytelling app designed to teach Object-Oriented Programming through interactive narrative. Implemented core OOP concepts — classes, objects, control flow — wrapped in modular gameplay designed to boost engagement and concept retention.</div>
-          <a href="https://github.com/imbusybro/alice_in_cpp_land" target="_blank" class="project-link">View on GitHub ↗</a>
-        </div>
+        <div class="project-tech">C++</div>
+        <div class="project-title">Alice in C++ Land</div>
+        <div class="project-desc">A gamified storytelling app designed to teach Object-Oriented Programming through interactive narrative. Implemented core OOP concepts — classes, objects, control flow — wrapped in modular gameplay designed to boost engagement and concept retention.</div>
+        <a href="https://github.com/imbusybro/alice_in_cpp_land" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
       <div class="project-card">
         <div class="project-num">02</div>
-        <div>
-          <div class="project-tech">Python · HTML · CSS</div>
-          <div class="project-title">Alice in Programming Land (Extended)</div>
-          <div class="project-desc">Ported the C++ educational game to Python for improved interactivity and scalability, then layered an HTML/CSS frontend on top. Built a modular quiz system covering core programming concepts, making the platform more accessible and visually engaging.</div>
-          <a href="https://github.com/imbusybro/wonderland-learning-platform" target="_blank" class="project-link">View on GitHub ↗</a>
-        </div>
+        <div class="project-tech">Python · HTML · CSS</div>
+        <div class="project-title">Alice in Programming Land (Extended)</div>
+        <div class="project-desc">Ported the C++ educational game to Python for improved interactivity and scalability, then layered an HTML/CSS frontend on top. Built a modular quiz system covering core programming concepts, making the platform more accessible and visually engaging.</div>
+        <a href="https://github.com/imbusybro/wonderland-learning-platform" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
       <div class="project-card">
         <div class="project-num">03</div>
-        <div>
-          <div class="project-tech">Tableau</div>
-          <div class="project-title">IMDb Movies &amp; Ratings Dashboard</div>
-          <div class="project-desc">An interactive Tableau dashboard analyzing IMDb ratings and genre trends. Features genre-wise metrics, dynamic filters, and intuitive visuals — turning a raw dataset into a story about what audiences love and why.</div>
-          <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
-        </div>
+        <div class="project-tech">Tableau</div>
+        <div class="project-title">IMDb Movie Insights Dashboard</div>
+        <div class="project-desc">An interactive Tableau dashboard analyzing movie trends, IMDb ratings, and genre performance. Features genre-wise metrics, dynamic filters, and intuitive visuals — turning a raw dataset into a story about what audiences love and why.</div>
+        <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
       <div class="project-card">
         <div class="project-num">04</div>
-        <div>
-          <div class="project-tech">Tableau · Excel</div>
-          <div class="project-title">HR Analytics Dashboard</div>
-          <div class="project-desc">An interactive dashboard exploring workforce data — tracking attrition rates, department-wise headcount, salary distribution, and employee satisfaction metrics to surface actionable HR insights.</div>
-          <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
-        </div>
+        <div class="project-tech">Tableau · Excel</div>
+        <div class="project-title">HR Analytics Dashboard</div>
+        <div class="project-desc">An interactive dashboard exploring workforce data — tracking attrition rates, department-wise headcount, salary distribution, and employee satisfaction metrics to surface actionable HR insights.</div>
+        <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
       <div class="project-card">
         <div class="project-num">05</div>
-        <div>
-          <div class="project-tech">Tableau · Excel</div>
-          <div class="project-title">Shop Business Summary Dashboard</div>
-          <div class="project-desc">A clean business overview dashboard visualizing sales performance, revenue trends, top-selling products, and customer segments — built to help small businesses make data-driven decisions at a glance.</div>
-          <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
-        </div>
+        <div class="project-tech">Tableau · Excel</div>
+        <div class="project-title">Shop Business Summary Dashboard</div>
+        <div class="project-desc">A clean business overview dashboard visualizing sales performance, revenue trends, top-selling products, and customer segments — built to help small businesses make data-driven decisions at a glance.</div>
+        <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
       <div class="project-card">
         <div class="project-num">06</div>
-        <div>
-          <div class="project-tech">Tableau · Excel</div>
-          <div class="project-title">Global Sales &amp; Logistics Dashboard</div>
-          <div class="project-desc">A multi-region sales and supply chain dashboard tracking order volumes, shipping performance, regional revenue breakdowns, and logistics KPIs across global markets.</div>
-          <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
-        </div>
+        <div class="project-tech">Tableau · Excel</div>
+        <div class="project-title">Global Sales &amp; Logistics Dashboard</div>
+        <div class="project-desc">A multi-region sales and supply chain dashboard tracking order volumes, shipping performance, regional revenue breakdowns, and logistics KPIs across global markets.</div>
+        <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
     </div>
   </section>
@@ -372,11 +364,11 @@
       <div>
         <p class="contact-intro">Looking for internship opportunities in software development or data analytics. If you're hiring, collaborating, or just want to chat about tech and data — I'd love to hear from you.</p>
         <div class="contact-links">
-          <a href="#" id="contact-email-link" class="contact-link">
-            <div class="contact-link-icon">✉️</div>
+          <a href="https://github.com/imbusybro" target="_blank" class="contact-link">
+            <div class="contact-link-icon">🐙</div>
             <div class="contact-link-info">
-              <div class="contact-link-label">Email (Click to copy)</div>
-              <div class="contact-link-val" id="contact-email-text">—</div>
+              <div class="contact-link-label">GitHub</div>
+              <div class="contact-link-val">@imbusybro</div>
             </div>
           </a>
           <a href="https://www.linkedin.com/in/srishti-k-553185312/" target="_blank" class="contact-link">
@@ -384,13 +376,6 @@
             <div class="contact-link-info">
               <div class="contact-link-label">LinkedIn</div>
               <div class="contact-link-val">in/srishti-k-553185312</div>
-            </div>
-          </a>
-          <a href="https://github.com/imbusybro" target="_blank" class="contact-link">
-            <div class="contact-link-icon">🐙</div>
-            <div class="contact-link-info">
-              <div class="contact-link-label">GitHub</div>
-              <div class="contact-link-val">@imbusybro</div>
             </div>
           </a>
         </div>
@@ -420,44 +405,6 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var user = 'srishtik.685';
-      var domain = 'gmail.com';
-      var full = user + '@' + domain;
-      var link = 'mailto:' + full;
-
-      // Update about link
-      var aboutLink = document.getElementById('about-email-link');
-      if (aboutLink) {
-        aboutLink.setAttribute('href', link);
-        aboutLink.textContent = full;
-      }
-
-      // Update contact link and add Copy functionality
-      var contactLink = document.getElementById('contact-email-link');
-      var contactText = document.getElementById('contact-email-text');
-      if (contactLink && contactText) {
-        contactLink.setAttribute('href', link);
-        contactText.textContent = full;
-
-        contactLink.addEventListener('click', function(e) {
-          // Attempt to copy to clipboard
-          navigator.clipboard.writeText(full).then(function() {
-            var originalVal = contactText.textContent;
-            contactText.textContent = 'Copied to clipboard!';
-            contactText.style.color = 'var(--accent)';
-            
-            setTimeout(function() {
-              contactText.textContent = full;
-              contactText.style.color = 'var(--text)';
-            }, 2000);
-          });
-          // Note: we don't preventDefault() here so it still tries to open the mail app
-        });
-      }
-    });
-
-    // Formspree contact form
     async function sendMessage() {
       var name = document.getElementById('form-name').value.trim();
       var email = document.getElementById('form-email').value.trim();
@@ -491,12 +438,11 @@
         status.style.display = 'block';
         status.style.color = 'var(--accent2)';
         status.textContent = 'Something went wrong. Please try again.';
-        btn.textContent = 'Send Message';
+        btn.textContent = 'Send Message →';
         btn.disabled = false;
       }
     }
 
-    // Scroll fade-in
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) {
         if (e.isIntersecting) e.target.classList.add('visible');
