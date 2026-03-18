@@ -64,7 +64,7 @@
     .info-card { background: var(--card); border: 1px solid var(--border); border-radius: 2px; padding: 1.2rem 1.5rem; }
     .info-card-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
     .info-card-value { font-size: 0.95rem; color: var(--text); }
-    .info-card-value a { color: var(--accent); text-decoration: none; }
+    .info-card-value a { color: var(--accent); text-decoration: none; cursor: pointer; }
     .info-card-value a:hover { text-decoration: underline; }
 
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
@@ -101,12 +101,12 @@
     .achieve-item:hover { border-color: rgba(200,180,255,0.3); }
     .achieve-icon { font-size: 1.4rem; flex-shrink: 0; }
     .achieve-text { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-    .achieve-text strong { display: block; color: var(--text); margin-bottom: 0.2rem; font-weight: 500; }
+    .achieve-text strong { block; color: var(--text); margin-bottom: 0.2rem; font-weight: 500; }
 
     .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
     .contact-intro { font-size: 1.05rem; color: var(--muted); line-height: 1.9; margin-bottom: 2rem; }
     .contact-links { display: flex; flex-direction: column; gap: 1rem; }
-    .contact-link { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; background: var(--card); border: 1px solid var(--border); border-radius: 2px; text-decoration: none; transition: all 0.25s; }
+    .contact-link { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; background: var(--card); border: 1px solid var(--border); border-radius: 2px; text-decoration: none; transition: all 0.25s; cursor: pointer; }
     .contact-link:hover { border-color: var(--accent); transform: translateX(6px); }
     .contact-link-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: rgba(200,180,255,0.08); border-radius: 2px; font-size: 1rem; flex-shrink: 0; }
     .contact-link-info { flex: 1; }
@@ -199,7 +199,7 @@
         </div>
         <div class="info-card">
           <div class="info-card-label">Email</div>
-          <div class="info-card-value"><a id="about-email-link">click to email</a></div>
+          <div class="info-card-value"><a href="#" id="about-email-link">click to email</a></div>
         </div>
         <div class="info-card">
           <div class="info-card-label">GitHub</div>
@@ -372,7 +372,7 @@
       <div>
         <p class="contact-intro">Looking for internship opportunities in software development or data analytics. If you're hiring, collaborating, or just want to chat about tech and data — I'd love to hear from you.</p>
         <div class="contact-links">
-          <a id="contact-email-link" class="contact-link">
+          <a href="#" id="contact-email-link" class="contact-link">
             <div class="contact-link-icon">✉️</div>
             <div class="contact-link-info">
               <div class="contact-link-label">Email</div>
@@ -420,8 +420,8 @@
   </footer>
 
   <script>
-    // Set email links using JS after page loads — avoids any scanner interception
-    window.onload = function() {
+    // Updated to DOMContentLoaded for faster response
+    document.addEventListener('DOMContentLoaded', function() {
       var user = 'srishtik.685';
       var domain = 'gmail.com';
       var full = user + '@' + domain;
@@ -429,20 +429,20 @@
 
       var aboutLink = document.getElementById('about-email-link');
       if (aboutLink) {
-        aboutLink.href = link;
+        aboutLink.setAttribute('href', link);
         aboutLink.textContent = full;
       }
 
       var contactLink = document.getElementById('contact-email-link');
       if (contactLink) {
-        contactLink.href = link;
+        contactLink.setAttribute('href', link);
       }
 
       var contactText = document.getElementById('contact-email-text');
       if (contactText) {
         contactText.textContent = full;
       }
-    };
+    });
 
     // Formspree contact form
     async function sendMessage() {
