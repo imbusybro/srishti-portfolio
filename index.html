@@ -1081,31 +1081,32 @@
       }
     }
 
-
-    // Build email from char codes so no scanner can intercept
-    (function(){
-      var p=[115,114,105,115,104,116,105,107,46,54,56,53];
-      var d=[103,109,97,105,108,46,99,111,109];
-      var u=p.map(function(c){return String.fromCharCode(c);}).join('');
-      var dm=d.map(function(c){return String.fromCharCode(c);}).join('');
-      var email=u+'@'+dm;
-      var href='mailto:'+email;
-      var l1=document.getElementById('email-link1');
-      var l2=document.getElementById('email-link2');
-      var e1=document.getElementById('em1');
-      var e2=document.getElementById('em2');
-      if(l1){l1.href=href; l1.style.cursor='pointer';}
-      if(l2){l2.href=href; l2.style.cursor='pointer';}
-      if(e1) e1.textContent=email;
-      if(e2) e2.textContent=email;
-    })();
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) e.target.classList.add('visible');
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var p = [115,114,105,115,104,116,105,107,46,54,56,53];
+      var d = [103,109,97,105,108,46,99,111,109];
+      var u = p.map(function(c){ return String.fromCharCode(c); }).join('');
+      var dm = d.map(function(c){ return String.fromCharCode(c); }).join('');
+      var email = u + '@' + dm;
+      var href = 'mailto:' + email;
+
+      var l1 = document.getElementById('email-link1');
+      var l2 = document.getElementById('email-link2');
+      var e1 = document.getElementById('em1');
+      var e2 = document.getElementById('em2');
+
+      if (l1) { l1.setAttribute('href', href); }
+      if (l2) { l2.setAttribute('href', href); }
+      if (e1) { e1.textContent = email; }
+      if (e2) { e2.textContent = email; }
+    });
+
   </script>
 </body>
 </html>
