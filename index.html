@@ -36,7 +36,7 @@
     .hero-tag::before { content: ''; width: 30px; height: 1px; background: var(--accent); }
     .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 1.05; margin-bottom: 0.6rem; color: var(--text); }
     .hero h1 em { font-style: italic; color: var(--accent); }
-    .hero-role { font-family: 'DM Mono', monospace; font-size: 1rem; color: var(--accent2); letter-spacing: 0.08em; margin-bottom: 1.4rem; }
+    .hero-role { font-family: 'DM Mono', monospace; font-size: 1.1rem; color: var(--accent2); letter-spacing: 0.08em; margin-bottom: 1.4rem; font-weight: 500; }
     .hero-role span { opacity: 0.5; margin: 0 0.6rem; }
     .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 520px; line-height: 1.85; margin-bottom: 2.5rem; }
     .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -87,7 +87,7 @@
     .project-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--text); margin-bottom: 0.8rem; }
     .project-desc { color: var(--muted); line-height: 1.8; font-size: 0.95rem; }
     .project-link { display: inline-flex; align-items: center; gap: 0.4rem; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); text-decoration: none; margin-top: 1.2rem; border-bottom: 1px solid transparent; padding-bottom: 2px; transition: border-color 0.2s; }
-    .project-link:hover { border-color: var(--accent); }
+    .project-link:hover { border-color: var(--accent); transform: scale(1.03); }
 
     .edu-timeline { position: relative; padding-left: 2rem; }
     .edu-timeline::before { content: ''; position: absolute; left: 0; top: 0.5rem; bottom: 0; width: 1px; background: var(--border); }
@@ -161,6 +161,7 @@
       <div class="hero-tag">CS & Data Science · NMIMS Mumbai</div>
       <h1>Hi, I'm <em>Srishti</em>.</h1>
       <div class="hero-role">Aspiring Data Analyst <span>·</span> Tableau <span>·</span> Excel <span>·</span> Python</div>
+      <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(200,180,255,0.08);border:1px solid rgba(200,180,255,0.2);border-radius:2px;padding:0.35rem 0.9rem;margin-bottom:1.4rem;font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);"><span style="width:6px;height:6px;border-radius:50%;background:#7dffb3;display:inline-block;box-shadow:0 0 6px #7dffb3;"></span>Open to internship opportunities in Data Analytics</div>
       <p class="hero-sub">
         I build interactive dashboards and data-driven solutions to uncover insights and support decision-making — and occasionally gamify the way people learn to code.
       </p>
@@ -267,6 +268,7 @@
         <div class="project-tech">C++</div>
         <div class="project-title">Alice in C++ Land</div>
         <div class="project-desc">A gamified storytelling app designed to teach Object-Oriented Programming through interactive narrative. Implemented core OOP concepts — classes, objects, control flow — wrapped in modular gameplay designed to boost engagement and concept retention.</div>
+        <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);margin-top:0.8rem;letter-spacing:0.05em;">✦ Made OOP concepts accessible through play — designed for zero prior experience.</p>
         <a href="https://github.com/imbusybro/alice_in_cpp_land" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
       <div class="project-card">
@@ -274,13 +276,16 @@
         <div class="project-tech">Python · HTML · CSS</div>
         <div class="project-title">Alice in Programming Land (Extended)</div>
         <div class="project-desc">Ported the C++ educational game to Python for improved interactivity and scalability, then layered an HTML/CSS frontend on top. Built a modular quiz system covering core programming concepts, making the platform more accessible and visually engaging.</div>
+        <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);margin-top:0.8rem;letter-spacing:0.05em;">✦ Extended reach by rebuilding in Python with a full frontend and quiz engine.</p>
         <a href="https://github.com/imbusybro/wonderland-learning-platform" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
       <div class="project-card">
         <div class="project-num">03</div>
         <div class="project-tech">Tableau</div>
         <div class="project-title">IMDb Movie Insights Dashboard</div>
+        <div style="margin:0.8rem 0 1rem;border:1px dashed rgba(200,180,255,0.2);border-radius:2px;padding:1.2rem;text-align:center;color:var(--muted);font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;background:rgba(200,180,255,0.02);">📊 Add a screenshot of your dashboard here<br/><span style="font-size:0.6rem;opacity:0.6;">Replace this block with: &lt;img src="imdb-dashboard.png" style="width:100%;border-radius:2px;"&gt;</span></div>
         <div class="project-desc">An interactive Tableau dashboard analyzing movie trends, IMDb ratings, and genre performance. Features genre-wise metrics, dynamic filters, and intuitive visuals — turning a raw dataset into a story about what audiences love and why.</div>
+        <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);margin-top:0.8rem;letter-spacing:0.05em;">✦ Built interactive dashboards analyzing movie trends and ratings using Tableau.</p>
         <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
       <div class="project-card">
@@ -288,6 +293,7 @@
         <div class="project-tech">Tableau · Excel</div>
         <div class="project-title">HR Analytics Dashboard</div>
         <div class="project-desc">An interactive dashboard exploring workforce data — tracking attrition rates, department-wise headcount, salary distribution, and employee satisfaction metrics to surface actionable HR insights.</div>
+        <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);margin-top:0.8rem;letter-spacing:0.05em;">✦ Built dashboards analyzing HR attrition and sales performance using Tableau.</p>
         <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
       <div class="project-card">
@@ -295,6 +301,7 @@
         <div class="project-tech">Tableau · Excel</div>
         <div class="project-title">Shop Business Summary Dashboard</div>
         <div class="project-desc">A clean business overview dashboard visualizing sales performance, revenue trends, top-selling products, and customer segments — built to help small businesses make data-driven decisions at a glance.</div>
+        <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);margin-top:0.8rem;letter-spacing:0.05em;">✦ Helped visualize sales trends to support data-driven business decisions.</p>
         <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
       <div class="project-card">
@@ -302,6 +309,7 @@
         <div class="project-tech">Tableau · Excel</div>
         <div class="project-title">Global Sales &amp; Logistics Dashboard</div>
         <div class="project-desc">A multi-region sales and supply chain dashboard tracking order volumes, shipping performance, regional revenue breakdowns, and logistics KPIs across global markets.</div>
+        <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);margin-top:0.8rem;letter-spacing:0.05em;">✦ Tracked logistics KPIs and revenue across global markets in a single dashboard.</p>
         <a href="https://github.com/imbusybro/data-analytics-projects" target="_blank" class="project-link">View on GitHub ↗</a>
       </div>
     </div>
